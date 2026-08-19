@@ -17,19 +17,40 @@ public class RecursionBasicspart2 {
 
 
     // Remove Duplicates in a string
-    public static void removeDuplicates(String str, int idx, StringBuilder newstr, boolean map[]) {
-        if(idx == str.length()) {
-            System.out.println(newstr);
-            return;
+    // public static void removeDuplicates(String str, int idx, StringBuilder newstr, boolean map[]) {
+    //     if(idx == str.length()) {
+    //         System.out.println(newstr);
+    //         return;
+    //     }
+
+    //     char currchar = str.charAt(idx);
+    //     if(map[currchar - 'a'] == true) {
+    //         removeDuplicates(str, idx+1, newstr, map);
+    //     } else {
+    //         map[currchar - 'a'] = true;
+    //         removeDuplicates(str, idx+1, newstr.append(currchar), map);
+    //     }
+    // }
+
+
+
+    // Friends Pairing Problem
+    public static int friendsPairing(int n) {
+        if(n == 1 || n == 2) {
+            return n;
         }
 
-        char currchar = str.charAt(idx);
-        if(map[currchar - 'a'] == true) {
-            removeDuplicates(str, idx+1, newstr, map);
-        } else {
-            map[currchar - 'a'] = true;
-            removeDuplicates(str, idx+1, newstr.append(currchar), map);
-        }
+        // choice
+        // 1. single
+        int fnm1 = friendsPairing(n-1);
+
+        // 2. pair
+        int fnm2 = friendsPairing(n-2);
+        int pairWays = (n-1) * fnm2;
+
+        // totWays
+        int totWays = fnm1 + pairWays;
+        return totWays;
     }
 
     public static void main(String args[]) {
@@ -39,7 +60,12 @@ public class RecursionBasicspart2 {
 
 
         // Remove Duplicates in a string
-        String str = "appnnacollege";
-        removeDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
+        // String str = "appnnacollege";
+        // removeDuplicates(str, 0, new StringBuilder(""), new boolean[26]);
+
+
+
+        // Friends Pairing Problem
+        System.out.println(friendsPairing(3));
     }
 }
