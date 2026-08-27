@@ -82,7 +82,7 @@ public class RecursionBasicspart2 {
 
 
 
-        // Binar String Code Problem
+        // Binary String Code Problem
         printBinStrings(3, 0, new StringBuilder(""));
     }
 }
