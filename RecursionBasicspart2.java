@@ -4,10 +4,10 @@ public class RecursionBasicspart2 {
     //     if(n == 0 || n == 1) {
     //         return 1;
     //     }
-    //     // vertical choice
+    //     //     vertical choice
     //     int fnm1 = tilingproblem(n-1);
 
-    //     // horizontal choice
+    //     horizontal choice
     //     int fnm2 = tilingproblem(n-2);
         
     //     int totalways = fnm1 + fnm2;
@@ -18,10 +18,10 @@ public class RecursionBasicspart2 {
 
     // Remove Duplicates in a string
     // public static void removeDuplicates(String str, int idx, StringBuilder newstr, boolean map[]) {
-    //     if(idx == str.length()) {
+        // if(idx == str.length()) {
     //         System.out.println(newstr);
     //         return;
-    //     }
+        // }
 
     //     char currchar = str.charAt(idx);
     //     if(map[currchar - 'a'] == true) {
@@ -35,24 +35,34 @@ public class RecursionBasicspart2 {
 
 
     // Friends Pairing Problem
-    public static int friendsPairing(int n) {
-        if(n == 1 || n == 2) {
-            return n;
+    // public static int friendsPairing(int n) {
+    //     if(n == 1 || n == 2) {
+    //         return n;
+    //     }
+
+    //     // choice
+    //     int fnm1 = friendsPairing(n-1);
+
+    //     int fnm2 = friendsPairing(n-2);
+    //     int pairWays = (n-1) * fnm2;
+
+    //     int totWays = fnm1 + pairWays;
+    //     return totWays;
+    // }
+
+
+    // Binary String Code Problem
+    public static void printBinStrings(int n, int lastPlace, StringBuilder str) {
+        // Base
+        if(n == 0) {
+            System.out.println(str);
+            return;
         }
-
-        // choice
-        1. single
-        int fnm1 = friendsPairing(n-1);
-
-        // 2. pair
-        int fnm2 = friendsPairing(n-2);
-        int pairWays = (n-1) * fnm2;
-
-        // totWays
-        int totWays = fnm1 + pairWays;
-        return totWays;
-
-        // return friendsPairing(n-1) + (n-1) * friendsPairing(n-2);
+        // kaam
+        printBinStrings(n-1, 0, str.append("0"));
+        if(lastPlace == 0) {
+            printBinStrings(n-1, 1, str.append("1"));
+        }
     }
 
     public static void main(String args[]) {
@@ -68,6 +78,11 @@ public class RecursionBasicspart2 {
 
 
         // Friends Pairing Problem
-        System.out.println(friendsPairing(3));
+        // System.out.println(friendsPairing(3));
+
+
+
+        // Binar String Code Problem
+        printBinStrings(3, 0, new StringBuilder(""));
     }
 }
