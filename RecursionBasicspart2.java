@@ -83,7 +83,6 @@ public class RecursionBasicspart2 {
 
 
         // Binary String Code Problem
-        int n = 3;
-        printBinStrings(n, 0, new StringBuilder(""));
+        printBinStrings(3, 0, new StringBuilder(""));
     }
 }
