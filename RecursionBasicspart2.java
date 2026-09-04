@@ -52,16 +52,16 @@ public class RecursionBasicspart2 {
 
 
     // Binary String Code Problem
-    public static void printBinStrings(int n, int lastPlace, StringBuilder str) {
+    public static void printBinStrings(int n, int lastPlace, String str) {
         // Base
         if(n == 0) {
             System.out.println(str);
             return;
         }
         // kaam
-        printBinStrings(n-1, 0, str.append("0"));
+        printBinStrings(n-1, 0, str+"0");
         if(lastPlace == 0) {
-            printBinStrings(n-1, 1, str.append("1"));
+            printBinStrings(n-1, 1, str+"1");
         }
     }
 
@@ -83,6 +83,6 @@ public class RecursionBasicspart2 {
 
 
         // Binary String Code Problem
-        printBinStrings(3, 0, new StringBuilder(""));
+        printBinStrings(3, 0, "");
     }
 }
