@@ -35,27 +35,50 @@ public class DsaCllgBasics {
 
 
     // 4. Checks if sum of powers of digits equal to the number
-    public static void ArmstrongNumber(int num) {
+    // public static void ArmstrongNumber(int num) {
+    //     int sum = 0;
+    //     int temp = num;
+    //     int count = 0;
+
+    //     while(temp > 0) {
+    //         count++;
+    //         temp /= 10;
+    //     }
+
+    //     temp = num;
+    //     while(temp > 0) {
+    //         int digit = temp % 10;
+    //         sum += Math.pow(digit, count);
+    //         temp /= 10;
+    //     }
+
+    //     if(num == sum) {
+    //         System.out.println("The number is armstrong");
+    //     } else {
+    //         System.out.println("The number is not armstrong");
+    //     }
+    // }
+
+    // 5. Checks if sum of factorials of digits equals the number
+    public static int factorial(int n) {
+        if(n == 0) {
+            return 1;
+        }
+        return n * factorial(n-1);
+    }
+
+    public static void SumOfFact(int num) {
         int sum = 0;
         int temp = num;
-        int count = 0;
-
-        while(temp > 0) {
-            count++;
-            temp /= 10;
-        }
-
-        temp = num;
         while(temp > 0) {
             int digit = temp % 10;
-            sum += Math.pow(digit, count);
+            sum += factorial(digit);
             temp /= 10;
         }
-
         if(num == sum) {
-            System.out.println("The number is armstrong");
+            System.out.println("The number is strong");
         } else {
-            System.out.println("The number is not armstrong");
+            System.out.println("The number is not strong");
         }
     }
 
@@ -77,7 +100,12 @@ public class DsaCllgBasics {
 
 
         // Problem 4
-        int num = 153;
-        ArmstrongNumber(num);
+        // int num = 153;
+        // ArmstrongNumber(num);
+
+
+        // Problem 5
+        int num = 145;
+        SumOfFact(num);
     }
 }
