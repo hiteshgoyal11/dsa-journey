@@ -60,25 +60,43 @@ public class DsaCllgBasics {
     // }
 
     // 5. Checks if sum of factorials of digits equals the number
-    public static int factorial(int n) {
-        if(n == 0) {
-            return 1;
-        }
-        return n * factorial(n-1);
-    }
+    // public static int factorial(int n) {
+    //     if(n == 0) {
+    //         return 1;
+    //     }
+    //     return n * factorial(n-1);
+    // }
 
-    public static void SumOfFact(int num) {
+    // public static void SumOfFact(int num) {
+    //     int sum = 0;
+    //     int temp = num;
+    //     while(temp > 0) {
+    //         int digit = temp % 10;
+    //         sum += factorial(digit);
+    //         temp /= 10;
+    //     }
+    //     if(num == sum) {
+    //         System.out.println("The number is strong");
+    //     } else {
+    //         System.out.println("The number is not strong");
+    //     }
+    // }
+
+    // 6. Perfect Number
+    public static void SpyNum(int num) {
         int sum = 0;
-        int temp = num;
-        while(temp > 0) {
-            int digit = temp % 10;
-            sum += factorial(digit);
-            temp /= 10;
+        int prod = 1;
+        while(num > 0) {
+            int digit = num%10;
+            sum += digit;
+            prod *= digit;
+            num /= 10;
         }
-        if(num == sum) {
-            System.out.println("The number is strong");
+
+        if(sum == prod) {
+            System.out.println("The number is spy");
         } else {
-            System.out.println("The number is not strong");
+            System.out.println("The number is not spy");
         }
     }
 
@@ -105,7 +123,12 @@ public class DsaCllgBasics {
 
 
         // Problem 5
-        int num = 145;
-        SumOfFact(num);
+        // int num = 145;
+        // SumOfFact(num);
+
+
+        // Problem 6;
+        int num = 1124;
+        SpyNum(num);
     }
 }
