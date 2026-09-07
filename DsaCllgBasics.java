@@ -82,21 +82,37 @@ public class DsaCllgBasics {
     //     }
     // }
 
-    // 6. Perfect Number
-    public static void SpyNum(int num) {
-        int sum = 0;
-        int prod = 1;
-        while(num > 0) {
-            int digit = num%10;
-            sum += digit;
-            prod *= digit;
-            num /= 10;
-        }
+    // 6. Spy Number
+    // public static void SpyNum(int num) {
+    //     int sum = 0;
+    //     int prod = 1;
+    //     while(num > 0) {
+    //         int digit = num%10;
+    //         sum += digit;
+    //         prod *= digit;
+    //         num /= 10;
+    //     }
 
-        if(sum == prod) {
-            System.out.println("The number is spy");
+    //     if(sum == prod) {
+    //         System.out.println("The number is spy");
+    //     } else {
+    //         System.out.println("The number is not spy");
+    //     }
+    // }
+
+
+    // 7.
+    public static void PerfectNum(int num) {
+        int sum = 0;
+        for(int i=1; i<num; i++) {
+            if(num % i == 0) {
+                sum += i;
+            }
+        }
+        if(sum == num) {
+            System.out.println("The number is perfect");
         } else {
-            System.out.println("The number is not spy");
+            System.out.println("The number is not perfect");
         }
     }
 
@@ -127,8 +143,12 @@ public class DsaCllgBasics {
         // SumOfFact(num);
 
 
-        // Problem 6;
-        int num = 1124;
-        SpyNum(num);
+        // Problem 6
+        // int num = 1124;
+        // SpyNum(num);
+
+        // Problem 7
+        int num = 28;
+        PerfectNum(num);
     }
 }
