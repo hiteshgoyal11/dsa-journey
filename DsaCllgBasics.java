@@ -1,3 +1,4 @@
+import java.lang.Math;
 public class DsaCllgBasics {
     // 1. Reapeatedly adds digits until a single digit is obtained
     // public static int addDigits(int num) {
@@ -22,14 +23,40 @@ public class DsaCllgBasics {
     // }
 
     // 3. Multiples of all digits of a number
-    public static int productOfDigits(int num) {
-        int prod = 1;
-        while(num > 0) {
-            int digit = num % 10;
-            prod *= digit;
-            num /= 10;
+    // public static int productOfDigits(int num) {
+    //     int prod = 1;
+    //     while(num > 0) {
+    //         int digit = num % 10;
+    //         prod *= digit;
+    //         num /= 10;
+    //     }
+    //     return prod;
+    // }
+
+
+    // 4. Checks if sum of powers of digits equal to the number
+    public static void ArmstrongNumber(int num) {
+        int sum = 0;
+        int temp = num;
+        int count = 0;
+
+        while(temp > 0) {
+            count++;
+            temp /= 10;
         }
-        return prod;
+
+        temp = num;
+        while(temp > 0) {
+            int digit = temp % 10;
+            sum += Math.pow(digit, count);
+            temp /= 10;
+        }
+
+        if(num == sum) {
+            System.out.println("The number is armstrong");
+        } else {
+            System.out.println("The number is not armstrong");
+        }
     }
 
     public static void main(String[] args) {
@@ -45,7 +72,12 @@ public class DsaCllgBasics {
 
 
         // Problem 3
-        int num = 234;
-        System.out.println(productOfDigits(num));
+        // int num = 234;
+        // System.out.println(productOfDigits(num));
+
+
+        // Problem 4
+        int num = 153;
+        ArmstrongNumber(num);
     }
 }
