@@ -12,13 +12,24 @@ public class DsaCllgBasics {
     // }
 
     // 2. count total digits present in a number
-    public static int countDigits(int num) {
-        int count = 0;
+    // public static int countDigits(int num) {
+    //     int count = 0;
+    //     while(num > 0) {
+    //         count++;
+    //         num /= 10;
+    //     }
+    //     return count;
+    // }
+
+    // 3. Multiples of all digits of a number
+    public static int productOfDigits(int num) {
+        int prod = 1;
         while(num > 0) {
-            count++;
+            int digit = num % 10;
+            prod *= digit;
             num /= 10;
         }
-        return count;
+        return prod;
     }
 
     public static void main(String[] args) {
@@ -29,7 +40,12 @@ public class DsaCllgBasics {
 
 
         // Problem 2
-        int num = 4589;
-        System.out.println(countDigits(num));
+        // int num = 4589;
+        // System.out.println(countDigits(num));
+
+
+        // Problem 3
+        int num = 234;
+        System.out.println(productOfDigits(num));
     }
 }
