@@ -161,18 +161,33 @@ public class DsaCllgBasics {
 
 
     // 11.
-    public static void HarshadNum(int num) {
-        int sum = 0;
+    // public static void HarshadNum(int num) {
+    //     int sum = 0;
+    //     while(num > 0) {
+    //         int digit = num % 10;
+    //         sum += digit;
+    //         num /= 10;
+    //     }
+    //     if(num % sum == 0) {
+    //         System.out.println("Harshad Number");
+    //     } else {
+    //         System.out.println("Not a harshad number");
+    //     }
+    // }
+
+
+    // 13.
+    public static void LargestDigit(int num) {
+        int min = Integer.MIN_VALUE;
+        int largest = 0;
         while(num > 0) {
             int digit = num % 10;
-            sum += digit;
+            if(min <= digit) {
+                min = digit;
+            }
             num /= 10;
         }
-        if(num % sum == 0) {
-            System.out.println("Harshad Number");
-        } else {
-            System.out.println("Not a harshad number");
-        }
+        System.out.println("The largest digit is " +min);
     }
 
     public static void main(String[] args) {
@@ -226,7 +241,12 @@ public class DsaCllgBasics {
 
 
         // Problem 11
-        int num = 18;
-        HarshadNum(num);
+        // int num = 18;
+        // HarshadNum(num);
+
+
+        // Problem 13
+        int num = 5729;
+        LargestDigit(num);
     }
 }
