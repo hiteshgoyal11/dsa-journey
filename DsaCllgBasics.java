@@ -102,17 +102,40 @@ public class DsaCllgBasics {
 
 
     // 7.
-    public static void PerfectNum(int num) {
+    // public static void PerfectNum(int num) {
+    //     int sum = 0;
+    //     for(int i=1; i<num; i++) {
+    //         if(num % i == 0) {
+    //             sum += i;
+    //         }
+    //     }
+    //     if(sum == num) {
+    //         System.out.println("The number is perfect");
+    //     } else {
+    //         System.out.println("The number is not perfect");
+    //     }
+    // }
+
+
+
+    // 8.
+    public static void Automorphic(int num) {
+        
+    }
+
+    // 9.
+    public static void Neon(int num) {
+        int sq = num * num;
         int sum = 0;
-        for(int i=1; i<num; i++) {
-            if(num % i == 0) {
-                sum += i;
-            }
+        while(sq > 0) {
+            int digit = sq % 10;
+            sum += digit;
+            sq /= 10;
         }
-        if(sum == num) {
-            System.out.println("The number is perfect");
+        if(num == sum) {
+            System.out.println("Neon Number");
         } else {
-            System.out.println("The number is not perfect");
+            System.out.println("Not a neon number");
         }
     }
 
@@ -148,7 +171,16 @@ public class DsaCllgBasics {
         // SpyNum(num);
 
         // Problem 7
-        int num = 28;
-        PerfectNum(num);
+        // int num = 28;
+        // PerfectNum(num);
+
+
+        // Problem 8
+        // int num = 25;
+        // Automorphic(num);
+
+        // Problem 9.
+        int num = 9;
+        Neon(num);
     }
 }
