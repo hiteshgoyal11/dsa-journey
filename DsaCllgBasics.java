@@ -142,20 +142,37 @@ public class DsaCllgBasics {
 
 
     // 10.
-    public static int Duck(int num) {
-        int i = 0;
+    // public static int Duck(int num) {
+    //     int i = 0;
+    //     while(num > 0) {
+    //         int digit = num % 10;
+    //         if(i == 0 && digit == 0) {
+    //             continue;
+    //         }
+    //         if(digit == 0) {
+    //             System.out.println("Duck number");
+    //         }
+    //         num /= 10;
+    //         i++;
+    //     }
+    //     return -1;
+    // }
+
+
+
+    // 11.
+    public static void HarshadNum(int num) {
+        int sum = 0;
         while(num > 0) {
             int digit = num % 10;
-            if(i == 0 && digit == 0) {
-                continue;
-            }
-            if(digit == 0) {
-                System.out.println("Duck number");
-            }
+            sum += digit;
             num /= 10;
-            i++;
         }
-        return -1;
+        if(num % sum == 0) {
+            System.out.println("Harshad Number");
+        } else {
+            System.out.println("Not a harshad number");
+        }
     }
 
     public static void main(String[] args) {
@@ -204,7 +221,12 @@ public class DsaCllgBasics {
 
 
         // Problem 10
-        int num = 1023;
-        Duck(num);
+        // int num = 1023;
+        // Duck(num);
+
+
+        // Problem 11
+        int num = 18;
+        HarshadNum(num);
     }
 }
