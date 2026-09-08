@@ -124,19 +124,38 @@ public class DsaCllgBasics {
     }
 
     // 9.
-    public static void Neon(int num) {
-        int sq = num * num;
-        int sum = 0;
-        while(sq > 0) {
-            int digit = sq % 10;
-            sum += digit;
-            sq /= 10;
+    // public static void Neon(int num) {
+    //     int sq = num * num;
+    //     int sum = 0;
+    //     while(sq > 0) {
+    //         int digit = sq % 10;
+    //         sum += digit;
+    //         sq /= 10;
+    //     }
+    //     if(num == sum) {
+    //         System.out.println("Neon Number");
+    //     } else {
+    //         System.out.println("Not a neon number");
+    //     }
+    // }
+
+
+
+    // 10.
+    public static int Duck(int num) {
+        int i = 0;
+        while(num > 0) {
+            int digit = num % 10;
+            if(i == 0 && digit == 0) {
+                continue;
+            }
+            if(digit == 0) {
+                System.out.println("Duck number");
+            }
+            num /= 10;
+            i++;
         }
-        if(num == sum) {
-            System.out.println("Neon Number");
-        } else {
-            System.out.println("Not a neon number");
-        }
+        return -1;
     }
 
     public static void main(String[] args) {
@@ -179,8 +198,13 @@ public class DsaCllgBasics {
         // int num = 25;
         // Automorphic(num);
 
-        // Problem 9.
-        int num = 9;
-        Neon(num);
+        // Problem 9
+        // int num = 9;
+        // Neon(num);
+
+
+        // Problem 10
+        int num = 1023;
+        Duck(num);
     }
 }
