@@ -146,7 +146,13 @@ public class Pattern {
 // }
     public static void main(String args[]) {
         // hollowRectangle(7,19);
+
+
+        // Inverted Rotated Half Pyramid   
         // inverted_rotated_half_pyramid(8);
+
+
+        
         // inverted_half_pyramid_with_numbers(5);
         // floyds_triangle(5, 1);
         // zeroonetriangle(5);
