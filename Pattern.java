@@ -154,7 +154,13 @@ public class Pattern {
 
         // Inverted Half Pyramid With Numbers
         // inverted_half_pyramid_with_numbers(5);
+
+
+        // Floyd's Triangle
         // floyds_triangle(5, 1);
+
+
+        
         // zeroonetriangle(5);
         // butterfly(5);
         // solidrhombus(4);
