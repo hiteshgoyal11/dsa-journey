@@ -152,7 +152,7 @@ public class Pattern {
         // inverted_rotated_half_pyramid(8);
 
 
-        
+        // Inverted Half Pyramid With Numbers
         // inverted_half_pyramid_with_numbers(5);
         // floyds_triangle(5, 1);
         // zeroonetriangle(5);
