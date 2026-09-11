@@ -170,6 +170,9 @@ public class Pattern {
 
         // Solid Rhombus
         // solidrhombus(4);
+
+
+        // Hollow Rhombus
         // hollowrhombus(10,10);
         // diamond(4);
     }
