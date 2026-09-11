@@ -246,7 +246,6 @@ public class DsaCllgBasics {
 
 
         // Problem 13
-        int num = 5729;
-        LargestDigit(num);
+        LargestDigit(5729);
     }
 }
