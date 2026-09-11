@@ -162,6 +162,9 @@ public class Pattern {
 
         // 0-1 Triangle
         // zeroonetriangle(5);
+
+
+        // Butterfly Pattern
         // butterfly(5);
         // solidrhombus(4);
         // hollowrhombus(10,10);
