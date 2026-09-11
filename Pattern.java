@@ -160,7 +160,7 @@ public class Pattern {
         // floyds_triangle(5, 1);
 
 
-        
+        // 0-1 Triangle
         // zeroonetriangle(5);
         // butterfly(5);
         // solidrhombus(4);
