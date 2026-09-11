@@ -145,6 +145,7 @@ public class Pattern {
 //     }
 // }
     public static void main(String args[]) {
+        // Hollow Rectangle
         // hollowRectangle(7,19);
 
 
@@ -174,6 +175,9 @@ public class Pattern {
 
         // Hollow Rhombus
         // hollowrhombus(10,10);
+
+
+        // Diamond Pattern
         // diamond(4);
     }
 }
