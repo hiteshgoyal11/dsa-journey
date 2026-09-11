@@ -166,6 +166,9 @@ public class Pattern {
 
         // Butterfly Pattern
         // butterfly(5);
+
+
+        // Solid Rhombus
         // solidrhombus(4);
         // hollowrhombus(10,10);
         // diamond(4);
