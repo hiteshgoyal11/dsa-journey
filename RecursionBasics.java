@@ -208,7 +208,7 @@ public class RecursionBasics {
         // System.out.println(optimizedPower(a, n));
         
 
-        // 
+        // Palindrome Number
         // System.out.print(isPalindrome(121));
     }
 }
