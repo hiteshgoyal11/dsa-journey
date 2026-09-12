@@ -118,7 +118,7 @@ public class DivideNConqueur {
             //     return search(arr, tar, si, mid-1);
             // }
         // }
-    }
+    // }
     public static void main(String args[]) {
         // For Merge Sort and Quick Sort
         // int arr[] = {6, 3, 9, 5, 2, 8};
