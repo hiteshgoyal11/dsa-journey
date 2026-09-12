@@ -126,20 +126,24 @@ public class RecursionBasics {
     //     return halfpowersq;
     // }
 
-    public static boolean isPalindrome(int x) {
-        int rev = 0;
-        while(x > 0) {
-            int digit = x % 10;
-            rev = rev * 10 + digit;
-            x = x / 10;
-            System.out.println(rev);
-        }
-        if(x != rev) {
-            return true;
-        }
 
-        return false;
-    }
+    // Palindrome Number
+    // public static boolean isPalindrome(int x) {
+    //     int rev = 0;
+    //     while(x > 0) {
+    //         int digit = x % 10;
+    //         rev = rev * 10 + digit;
+    //         x = x / 10;
+    //         System.out.println(rev);
+    //     }
+    //     if(x != rev) {
+    //         return true;
+    //     }
+
+    //     return false;
+    // }
+
+
     public static void main(String args[]) {
         // Print numbers from n to 1 (Decreasing Order)
         // int n = 10;
@@ -203,6 +207,8 @@ public class RecursionBasics {
         // int n = 10;
         // System.out.println(optimizedPower(a, n));
         
-        System.out.print(isPalindrome(121));
+
+        // 
+        // System.out.print(isPalindrome(121));
     }
 }
