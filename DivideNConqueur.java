@@ -126,6 +126,9 @@ public class DivideNConqueur {
 
         // Merge Sort
         // mergeSort(arr, 0, arr.length-1);
+
+
+        // Quick Sort
         // quickSort(arr, 0, arr.length-1);
         // printArr(arr);
 
