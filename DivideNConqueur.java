@@ -87,37 +87,37 @@ public class DivideNConqueur {
 
 
     // Rotated Sorted Array
-    public static int search(int arr[], int tar, int si, int ei) {
+    // public static int search(int arr[], int tar, int si, int ei) {
         // Base case
-        if(si > ei) {
-            return -1;
-        }
+        // if(si > ei) {
+        //     return -1;
+        // }
         // Kaam
-        int mid = si + (ei-si)/2;
+        // int mid = si + (ei-si)/2;
         // case FOUND
-        if(arr[mid] == tar) {
-            return mid;
-        }
+        // if(arr[mid] == tar) {
+        //     return mid;
+        // }
 
         // mid on L1
-        if(arr[si] <= arr[mid]) {
+        // if(arr[si] <= arr[mid]) {
             // case a: left
-            if(arr[si] <= tar && tar <= arr[mid]) {
-                return search(arr, tar, si, mid);
-            } else {
-                return search(arr, tar, mid+1, ei);
-            }
-        }
+            // if(arr[si] <= tar && tar <= arr[mid]) {
+            //     return search(arr, tar, si, mid);
+            // } else {
+            //     return search(arr, tar, mid+1, ei);
+            // }
+        // }
 
         // mid on L2
-        else {
+        // else {
             // case c: right
-            if(arr[mid] <= tar && tar <= arr[ei]) {
-                return search(arr, tar, mid, ei);
-            } else {
-                return search(arr, tar, si, mid-1);
-            }
-        }
+            // if(arr[mid] <= tar && tar <= arr[ei]) {
+            //     return search(arr, tar, mid, ei);
+            // } else {
+            //     return search(arr, tar, si, mid-1);
+            // }
+        // }
     }
     public static void main(String args[]) {
         // For Merge Sort and Quick Sort
