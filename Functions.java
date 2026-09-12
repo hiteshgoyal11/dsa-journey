@@ -47,6 +47,8 @@ public class Functions {
         // Print Hello World
         // phw();
 
+
+        // Print sum of two numbers
         // Scanner sc = new Scanner(System.in);
         // System.out.print("Enter value of a: ");
         // int a = sc.nextInt();
