@@ -120,6 +120,7 @@ public class DivideNConqueur {
         }
     }
     public static void main(String args[]) {
+        // For Merge Sort and Quick Sort
         // int arr[] = {6, 3, 9, 5, 2, 8};
         // mergeSort(arr, 0, arr.length-1);
         // quickSort(arr, 0, arr.length-1);
