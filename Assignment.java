@@ -1,3 +1,4 @@
+// import java.util.*;
 // public class Assignment {
 
     // average of three numbers using methods
@@ -40,8 +41,6 @@
 
 
 // Count how many times lowercase vowels occured in a string entered by the user
-// import java.util.*;
-
 // public class Assignment {
 //     public static int LowercaseVowelCount(String str) {
 //         int count = 0;
