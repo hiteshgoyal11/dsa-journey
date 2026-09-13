@@ -23,21 +23,19 @@
     // }
 
 
-
-// public class Assignment {
-//     public static void main(String args[]) {
-//         System.out.println(sumofdigit(54));
-//     }
-//     public static int sumofdigit(int n) {
-//         int sum = 0;
-//         while(n > 0) {
-//             int lastdigit = n % 10;
-//             sum += lastdigit;
-//             n /= 10;
-//         }
-//         return sum;
-//     }
-// }
+    // Sum of digits of a number using methods
+    // public static void main(String args[]) {
+    //     System.out.println(sumofdigit(54));
+    // }
+    // public static int sumofdigit(int n) {
+    //     int sum = 0;
+    //     while(n > 0) {
+    //         int lastdigit = n % 10;
+    //         sum += lastdigit;
+    //         n /= 10;
+    //     }
+    //     return sum;
+    // }
 
 
 
