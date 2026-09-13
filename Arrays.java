@@ -1,4 +1,4 @@
-import java.util.*;
+// import java.util.*;
 public class Arrays {
     // public static void update(int marks[]) {
     //     for(int i = 0; i < marks.length; i++) {
