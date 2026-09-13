@@ -62,7 +62,6 @@
 
 
 // What will be the output of the following code?
-// public class Assignment {
 //     public static void main(String args[]) {
 //         String str = "ShradhaDidi";
 //         String str1 = "ApnaCollege";
