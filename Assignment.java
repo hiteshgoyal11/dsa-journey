@@ -40,26 +40,24 @@
 
 
 
-// Count how many times lowercase vowels occured in a string entered by the user
-// public class Assignment {
-//     public static int LowercaseVowelCount(String str) {
-//         int count = 0;
-//         for(int i=0; i<str.length(); i++) {
-//             if(str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') {
-//                 count++;
-//             }
-//         }
-//         return count;
-//     }
+    // Count how many times lowercase vowels occured in a string entered by the user
+    // public static int LowercaseVowelCount(String str) {
+    //     int count = 0;
+    //     for(int i=0; i<str.length(); i++) {
+    //         if(str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') {
+    //             count++;
+    //         }
+    //     }
+    //     return count;
+    // }
 
-//     public static void main(String arge[]) {
-//         Scanner sc = new Scanner(System.in);
-//         String str;
-//         System.out.print("Enter a String : ");
-//         str = sc.nextLine();
-//         System.out.println(LowercaseVowelCount(str));
-//     }
-// }
+    // public static void main(String arge[]) {
+    //     Scanner sc = new Scanner(System.in);
+    //     String str;
+    //     System.out.print("Enter a String : ");
+    //     str = sc.nextLine();
+    //     System.out.println(LowercaseVowelCount(str));
+    // }
 
 
 
