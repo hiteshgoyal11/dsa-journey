@@ -7,20 +7,19 @@
 //     public static void main(String args[]) {
 //         average(2,4,3);
 //     } 
-// }
 
 
 
-       // To Check a number is even or not using methods
-//     public static boolean isEven(int n) {
-//         if(n % 2 == 0) {
-//             return true;
-//         }
-//         return false;
-//     }
-//     public static void main(String args[]) {
-//         System.out.println(isEven(9));
-//     }
+    // To Check a number is even or not using methods
+    // public static boolean isEven(int n) {
+    //     if(n % 2 == 0) {
+    //         return true;
+    //     }
+    //     return false;
+    // }
+    // public static void main(String args[]) {
+    //     System.out.println(isEven(9));
+    // }
 
 
 
