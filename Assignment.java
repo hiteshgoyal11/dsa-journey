@@ -1,12 +1,13 @@
-// average of three numbers using methods
 // public class Assignment {
-//     public static void average(int a, int b, int c) {
-//         int avg = (a + b + c) / 3;
-//         System.out.println("Average of Three Numbers Is : " +avg);
-//     }
-//     public static void main(String args[]) {
-//         average(2,4,3);
-//     } 
+
+    // average of three numbers using methods
+    // public static void average(int a, int b, int c) {
+    //     int avg = (a + b + c) / 3;
+    //     System.out.println("Average of Three Numbers Is : " +avg);
+    // }
+    // public static void main(String args[]) {
+    //     average(2,4,3);
+    // } 
 
 
 
