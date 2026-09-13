@@ -80,7 +80,6 @@
 
 
 // Determine if 2 strings are anagram of each other
-// public class Assignment {
 //     public static boolean isAnagram(String str1, String str2) {
 //         if(str1.length() != str2.length()) {
 //             return false;
