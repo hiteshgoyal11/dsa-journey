@@ -71,11 +71,11 @@
 
 
 
-// What will be the output of the following code?
-//     public static void main(String args[]) {
-//         String str = "ApnaCollege".replace("l", "");
-//         System.out.println(str);
-//     }
+    // What will be the output of the following code?
+    // public static void main(String args[]) {
+    //     String str = "ApnaCollege".replace("l", "");
+    //     System.out.println(str);
+    // }
 
 
 
