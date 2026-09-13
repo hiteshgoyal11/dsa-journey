@@ -11,8 +11,7 @@
 
 
 
-// To Check a number is even or not using methods
-// public class Assignment {
+       // To Check a number is even or not using methods
 //     public static boolean isEven(int n) {
 //         if(n % 2 == 0) {
 //             return true;
