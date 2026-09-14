@@ -1,5 +1,5 @@
 // import java.util.*;
-// public class Assignment {
+public class Assignment {
 
     // average of three numbers using methods
     // public static void average(int a, int b, int c) {
@@ -105,4 +105,4 @@
     //     String str2 = "silent";
     //     System.out.println(isAnagram(str1, str2));
     // }
-// }
+}
