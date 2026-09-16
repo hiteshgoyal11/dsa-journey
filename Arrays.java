@@ -145,10 +145,6 @@ public class Arrays {
     //     System.out.println("The Greatest Sum Is : " +greatest);
     //     System.out.println("The Smallest Sum Is : " +smallest);
     // }
-    // public static void main(String args[]) {
-    //     int numbers[] = {2, 4, 6, 8, 10};
-    //     printSubarrays(numbers);
-    // }
 
 
 
@@ -200,9 +196,18 @@ public class Arrays {
 
 
     public static void main(String args[]) {
+        // Print SubArrays ans then add array of each line then calculate the greatest and smallest sum HomeWork
+        // int numbers[] = {2, 4, 6, 8, 10};
+        // printSubarrays(numbers);
+
+
+
         // Max SubArray Sum - I(Brute Force)
         // int numbers[] = {2, 4, 6, 8, 10};
         // maxsubarraysum(numbers);
+
+
+
         // Maximum SubArray Sum - II(Prefix Sum)
         // int numbers[] = {1, -2, 6, -1, 3};
         // prefixsubarraysum(numbers);
