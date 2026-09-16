@@ -172,10 +172,6 @@ public class Arrays {
     //     }
     //     System.out.println("Maximum Sum : " +max);
     // }
-    // public static void main(String args[]) {
-    //     int numbers[] = {2, 4, 6, 8, 10};
-    //     maxsubarraysum(numbers);
-    // }
 
 
 
@@ -204,6 +200,9 @@ public class Arrays {
 
 
     public static void main(String args[]) {
+        // Max SubArray Sum - I(Brute Force)
+        // int numbers[] = {2, 4, 6, 8, 10};
+        // maxsubarraysum(numbers);
         // Maximum SubArray Sum - II(Prefix Sum)
         // int numbers[] = {1, -2, 6, -1, 3};
         // prefixsubarraysum(numbers);
