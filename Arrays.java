@@ -93,14 +93,6 @@ public class Arrays {
     //         last--;
     //     }
     // }
-    // public static void main(String args[]) {
-    //     int numbers[] = {2, 4, 6, 8, 10};
-    //     reverse(numbers);
-    //     for(int i = 0; i < numbers.length; i++) {
-    //         System.out.print(numbers[i]+ " ");
-    //     }
-    //     System.out.println();
-    // }
 
 
     // Print Pairs
@@ -192,6 +184,16 @@ public class Arrays {
 
 
     public static void main(String args[]) {
+        // Reverse An Array
+        // int numbers[] = {2, 4, 6, 8, 10};
+        // reverse(numbers);
+        // for(int i = 0; i < numbers.length; i++) {
+        //     System.out.print(numbers[i]+ " ");
+        // }
+        // System.out.println();
+
+
+
         // Print Pairs
         // int numbers[] = {2, 4, 6, 8, 10};
         // printPattern(numbers);
