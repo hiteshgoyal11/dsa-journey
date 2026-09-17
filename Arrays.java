@@ -113,10 +113,6 @@ public class Arrays {
     //         System.out.println();
     //     }
     // }
-    // public static void main(String args[]) {
-    //     int numbers[] = {2, 4, 6, 8, 10};
-    //     printPattern(numbers);
-    // }
 
 
     // Print SubArrays ans then add array of each line then calculate the greatest and smallest sum HomeWork
@@ -196,6 +192,11 @@ public class Arrays {
 
 
     public static void main(String args[]) {
+        // Print Pairs
+        // int numbers[] = {2, 4, 6, 8, 10};
+        // printPattern(numbers);
+
+
         // Print SubArrays ans then add array of each line then calculate the greatest and smallest sum HomeWork
         // int numbers[] = {2, 4, 6, 8, 10};
         // printSubarrays(numbers);
