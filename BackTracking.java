@@ -44,17 +44,44 @@ public  class BackTracking {
 
 
     // Find all permutations of a string using backtracking
-    public static void findPermutation(String str, String ans) {
+    // public static void findPermutation(String str, String ans) {
         // base case
-        if(str.length() == 0) {
-            System.out.println(ans);
+        // if(str.length() == 0) {
+        //     System.out.println(ans);
+        //     return;
+        // }
+        // recursion
+    //     for(int i=0; i<str.length(); i++) {
+    //         char curr = str.charAt(i);
+    //         String Newstr = str.substring(0, i) + str.substring(i+1);
+    //         findPermutation(Newstr, ans+curr);
+    //     }
+    // }
+
+
+
+    // N Queens Problem
+    public static void nQueens(char board[][], int row) {
+        // base
+        if(row == board.length) {
+            printBoard(board);
             return;
         }
-        // recursion
-        for(int i=0; i<str.length(); i++) {
-            char curr = str.charAt(i);
-            String Newstr = str.substring(0, i) + str.substring(i+1);
-            findPermutation(Newstr, ans+curr);
+        // column loop
+        for(int j=0; j<board.length; j++) {
+            board[row][j] = 'Q';
+            nQueens(board, row+1); //function call
+            board[row][j] = 'x'; //backtracking step
+        }
+    }
+
+    public static void printBoard(char board[][]) {
+        System.out.println("-------- chess board --------");
+        for(int i=0; i<board.length; i++) {
+            for(int j=0; j<board.length; j++) {
+                System.out.print(board[i][j]+ " ");
+            }
+            System.out.println();
         }
     }
     public static void main(String args[]) {
@@ -72,7 +99,20 @@ public  class BackTracking {
         
 
         // Find all permutations of a string using backtracking
-        String str = "abc";
-        findPermutation(str, "");
+        // String str = "abc";
+        // findPermutation(str, "");
+
+
+
+        // 
+        int n = 2;
+        char board[][] = new char[n][n];
+        // initialize
+        for(int i=0; i<n; i++) {
+            for(int j=0; j<n; j++) {
+                board[i][j] = 'x';
+            } 
+        }
+        nQueens(board, 0);
     }
 }
