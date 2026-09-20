@@ -83,21 +83,24 @@ public  class BackTracking {
         return true;
     }
     // N Queens Problem
-    public static void nQueens(char board[][], int row) {
+    public static boolean nQueens(char board[][], int row) {
         // base
         if(row == board.length) {
             // printBoard(board);
             count++;
-            return;
+            return true;
         }
         // column loop
         for(int j=0; j<board.length; j++) {
             if(isSafe(board, row, j)) {
                 board[row][j] = 'Q';
-                nQueens(board, row+1); //function call
+                if(nQueens(board, row+1)) {
+                    return true;
+                } //function call
                 board[row][j] = 'x'; //backtracking step
             }
         }
+        return false;
     }
 
     public static void printBoard(char board[][]) {
@@ -133,7 +136,7 @@ public  class BackTracking {
 
 
         // 
-        int n = 5;
+        int n = 4;
         char board[][] = new char[n][n];
         // initialize
         for(int i=0; i<n; i++) {
@@ -141,7 +144,12 @@ public  class BackTracking {
                 board[i][j] = 'x';
             } 
         }
-        nQueens(board, 0);
+        if(nQueens(board, 0)) {
+            System.out.println("Solution is possible");
+            printBoard(board);
+        } else {
+            System.out.println("Solution is not possible");
+        }
         System.out.println("total ways to solve n queens = " +count);
     }
 }
