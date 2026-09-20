@@ -86,7 +86,8 @@ public  class BackTracking {
     public static void nQueens(char board[][], int row) {
         // base
         if(row == board.length) {
-            printBoard(board);
+            // printBoard(board);
+            count++;
             return;
         }
         // column loop
@@ -108,6 +109,9 @@ public  class BackTracking {
             System.out.println();
         }
     }
+
+    static int count = 0;
+
     public static void main(String args[]) {
 
         // Change the array elements using backtracking
@@ -138,5 +142,6 @@ public  class BackTracking {
             } 
         }
         nQueens(board, 0);
+        System.out.println("total ways to solve n queens = " +count);
     }
 }
