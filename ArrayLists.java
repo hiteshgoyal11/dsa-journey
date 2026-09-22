@@ -43,6 +43,13 @@ public class ArrayLists {
 
 
         // Size
-        System.out.println(list.size());
+        // System.out.println(list.size());
+
+
+        // print the arraylist
+        for(int i=0; i<list.size(); i++) {
+            System.out.print(list.get(i)+ " ");
+        }
+        System.out.println();
     }
 }
