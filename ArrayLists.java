@@ -27,8 +27,13 @@ public class ArrayLists {
         // System.out.println(list);
 
 
-        // Set
-        list.set(2, 10);
-        System.out.println(list);
+        // Set - 0(n)
+        // list.set(2, 10);
+        // System.out.println(list);
+
+
+        // Contains - 0(n)
+        System.out.println(list.contains(1));
+        System.out.println(list.contains(11));
     }
 }
