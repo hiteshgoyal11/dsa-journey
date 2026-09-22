@@ -5,16 +5,16 @@ public class ArrayLists {
 
         // example to show how to create an ArrayList
         ArrayList<Integer> list = new ArrayList<>();
-        ArrayList<String> list2 = new ArrayList<>();
-        ArrayList<Boolean> list3 = new ArrayList<>();
+        // ArrayList<String> list2 = new ArrayList<>();
+        // ArrayList<Boolean> list3 = new ArrayList<>();
 
         // 1. Add Opeation - 0(1)
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
-        System.out.println(list);
+        // list.add(1);
+        // list.add(2);
+        // list.add(3);
+        // list.add(4);
+        // list.add(5);
+        // System.out.println(list);
 
 
         // 2. Add Operation - 0(n)
@@ -47,7 +47,19 @@ public class ArrayLists {
 
 
         // print the arraylist
-        for(int i=0; i<list.size(); i++) {
+        // for(int i=0; i<list.size(); i++) {
+        //     System.out.print(list.get(i)+ " ");
+        // }
+        // System.out.println();
+
+
+        // print reverse of an arraylist
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        for(int i=list.size()-1; i>=0; i--) {
             System.out.print(list.get(i)+ " ");
         }
         System.out.println();
