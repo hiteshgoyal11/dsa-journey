@@ -16,10 +16,18 @@ public class ArrayLists {
         list.add(5);
         System.out.println(list);
 
-        // Get Operation - 0(1)
-        int element = list.get(2);
-        System.out.println(element);
 
+        // Get Operation - 0(1)
+        // int element = list.get(2);
+        // System.out.println(element);
+
+
+        // Delete - 0(n)
+        list.remove(2);
+        System.out.println(list);
+
+
+        // Set
         
     }
 }
