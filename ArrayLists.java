@@ -8,12 +8,15 @@ public class ArrayLists {
         ArrayList<String> list2 = new ArrayList<>();
         ArrayList<Boolean> list3 = new ArrayList<>();
 
-        // Add Opeation
-        list.add(1); //0(1)
+        // 1. Add Opeation - 0(1)
+        list.add(1);
         list.add(2);
         list.add(3);
         list.add(4);
         list.add(5);
+
+        // 2. Add Operation - 0(n)
+        list.add(1, 9);
         System.out.println(list);
 
 
@@ -33,7 +36,7 @@ public class ArrayLists {
 
 
         // Contains - 0(n)
-        System.out.println(list.contains(1));
-        System.out.println(list.contains(11));
+        // System.out.println(list.contains(1));
+        // System.out.println(list.contains(11));
     }
 }
