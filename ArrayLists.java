@@ -23,11 +23,12 @@ public class ArrayLists {
 
 
         // Delete - 0(n)
-        list.remove(2);
-        System.out.println(list);
+        // list.remove(2);
+        // System.out.println(list);
 
 
         // Set
-        
+        list.set(2, 10);
+        System.out.println(list);
     }
 }
