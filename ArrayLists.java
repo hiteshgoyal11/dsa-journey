@@ -14,10 +14,12 @@ public class ArrayLists {
         list.add(3);
         list.add(4);
         list.add(5);
+        System.out.println(list);
+
 
         // 2. Add Operation - 0(n)
-        list.add(1, 9);
-        System.out.println(list);
+        // list.add(1, 9);
+        // System.out.println(list);
 
 
         // Get Operation - 0(1)
@@ -38,5 +40,9 @@ public class ArrayLists {
         // Contains - 0(n)
         // System.out.println(list.contains(1));
         // System.out.println(list.contains(11));
+
+
+        // Size
+        System.out.println(list.size());
     }
 }
