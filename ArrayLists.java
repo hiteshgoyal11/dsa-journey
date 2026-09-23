@@ -108,14 +108,39 @@ public class ArrayLists {
 
 
         // Sorting on ArrayList
+        // ArrayList<Integer> list = new ArrayList<>();
+        // list.add(2);
+        // list.add(5);
+        // list.add(9);
+        // list.add(3);
+        // list.add(6);
+        // System.out.println(list);
+        // Collections.sort(list); //ascending
+        // System.out.println(list);
+
+        // descending
+        // Collections.sort(list, Collections.reverseOrder());
+        // System.out.println(list);
+
+
+        // Multi-Dimensional ArrayList
+        ArrayList<ArrayList<Integer>> mainList = new ArrayList<>();
         ArrayList<Integer> list = new ArrayList<>();
-        list.add(2);
-        list.add(5);
-        list.add(9);
-        list.add(3);
-        list.add(6);
-        System.out.println(list);
-        Collections.sort(list);
-        System.out.println(list);
+        list.add(1); list.add(2);
+        mainList.add(list);
+
+        ArrayList<Integer> list2 = new ArrayList<>();
+        list2.add(3); list2.add(4);
+        mainList.add(list2);
+
+        for(int i=0; i<mainList.size(); i++) {
+            ArrayList<Integer> currList = mainList.get(i);
+            for(int j=0; j<currList.size(); j++) {
+                System.out.print(currList.get(j)+ " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println(mainList);
     }
 }
