@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Collections;
+// import java.util.Collections;
 public class ArrayLists {
 
     // Swap 2 numbers
@@ -8,6 +8,21 @@ public class ArrayLists {
     //     list.set(idx1, list.get(idx2));
     //     list.set(idx2, temp);
     // }
+
+
+    // Container With Most Water - Brute Force 0(n2)
+    public static int ContainerMostWater(ArrayList<Integer> height) {
+        int maxWater = 0;
+        for(int i=0; i<height.size(); i++) {
+            for(int j=i+1; j<height.size(); j++) {
+                int ht = Math.min(height.get(i), height.get(j));
+                int width = j-i;
+                int currWater = ht * width;
+                maxWater = Math.max(maxWater, currWater);
+            }
+        }
+        return maxWater;
+    }
     public static void main(String args[]) {
 
         // example to show how to create an ArrayList
@@ -124,7 +139,7 @@ public class ArrayLists {
 
 
         // Multi-Dimensional ArrayList
-        ArrayList<ArrayList<Integer>> mainList = new ArrayList<>();
+        // ArrayList<ArrayList<Integer>> mainList = new ArrayList<>();
         // ArrayList<Integer> list = new ArrayList<>();
         // list.add(1); list.add(2);
         // mainList.add(list);
@@ -143,33 +158,45 @@ public class ArrayLists {
 
         // or
 
-        ArrayList<Integer> list1 = new ArrayList<>();
-        ArrayList<Integer> list2 = new ArrayList<>();
-        ArrayList<Integer> list3 = new ArrayList<>();
+        // ArrayList<Integer> list1 = new ArrayList<>();
+        // ArrayList<Integer> list2 = new ArrayList<>();
+        // ArrayList<Integer> list3 = new ArrayList<>();
 
-        for(int i=1; i<=5; i++) {
-            list1.add(i*1);
-            list2.add(i*2);
-            list3.add(i*3);
-        }
+        // for(int i=1; i<=5; i++) {
+        //     list1.add(i*1);
+        //     list2.add(i*2);
+        //     list3.add(i*3);
+        // }
 
-        mainList.add(list1);
-        mainList.add(list2);
-        mainList.add(list3);
-        list2.remove(3);
-        list2.remove(2);
+        // mainList.add(list1);
+        // mainList.add(list2);
+        // mainList.add(list3);
+        // list2.remove(3);
+        // list2.remove(2);
 
-        System.out.println(mainList);
+        // System.out.println(mainList);
 
         // nested loops
-        for(int i=0; i<mainList.size(); i++) {
-            ArrayList<Integer> currList = mainList.get(i);
-            for(int j=0; j<currList.size(); j++) {
-                System.out.print(currList.get(j)+ " ");
-            }
-            System.out.println();
-        }
+        // for(int i=0; i<mainList.size(); i++) {
+        //     ArrayList<Integer> currList = mainList.get(i);
+        //     for(int j=0; j<currList.size(); j++) {
+        //         System.out.print(currList.get(j)+ " ");
+        //     }
+        //     System.out.println();
+        // }
 
 
+        // Container with most water - Brute Force 0(n2)
+        ArrayList<Integer> height = new ArrayList<>();
+        height.add(1);
+        height.add(8);
+        height.add(6);
+        height.add(2);
+        height.add(5);
+        height.add(4);
+        height.add(8);
+        height.add(3);
+        height.add(7);
+        System.out.println(ContainerMostWater(height));
     }
 }
