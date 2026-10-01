@@ -13,6 +13,8 @@ public class LinkedList {
     public static Node tail;
     public static int size;
 
+
+    // add first
     public void addFirst(int data) {
         // step1 = create new node
         Node newNode = new Node(data);
@@ -28,6 +30,8 @@ public class LinkedList {
         head = newNode;
     }
 
+
+    // add last
     public void addLast(int data) {
         Node newNode = new Node(data);
         size++;
@@ -39,6 +43,8 @@ public class LinkedList {
         tail = newNode;
     }
 
+
+    // print
     public void print() { //0(n)
         Node temp = head;
         while(temp != null) {
@@ -49,7 +55,7 @@ public class LinkedList {
     }
 
 
-    // 
+    // add in middle
     public void add(int idx, int data) {
         if(idx == 0) {
             addFirst(data);
@@ -70,6 +76,8 @@ public class LinkedList {
         temp.next = newNode;
     }
 
+
+    // remove first
     public int removeFirst() {
         if(size == 0) {
             System.out.println("LL is empty");
@@ -87,6 +95,7 @@ public class LinkedList {
     }
 
 
+    // remove last
     public int removeLast() {
         if(size == 0) {
             System.out.println("LL is empty");
@@ -109,6 +118,8 @@ public class LinkedList {
         return val;
     }
 
+
+    // search
     public int itrSearch(int key) { //0(n)
         Node temp = head;
         int i = 0;
