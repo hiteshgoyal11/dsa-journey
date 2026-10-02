@@ -78,62 +78,83 @@ public class LinkedList {
 
 
     // remove first
-    public int removeFirst() {
-        if(size == 0) {
-            System.out.println("LL is empty");
-            return Integer.MIN_VALUE;
-        } else if(size == 1) {
-            int val = head.data;
-            head = tail = null;
-            size = 0;
-            return val;
-        }
-        int val = head.data;
-        head = head.next;
-        size--;
-        return val;
-    }
+    // public int removeFirst() {
+    //     if(size == 0) {
+    //         System.out.println("LL is empty");
+    //         return Integer.MIN_VALUE;
+    //     } else if(size == 1) {
+    //         int val = head.data;
+    //         head = tail = null;
+    //         size = 0;
+    //         return val;
+    //     }
+    //     int val = head.data;
+    //     head = head.next;
+    //     size--;
+    //     return val;
+    // }
 
 
     // remove last
-    public int removeLast() {
-        if(size == 0) {
-            System.out.println("LL is empty");
-            return Integer.MIN_VALUE;
-        } else if(size == 1) {
-            int val = head.data;
-            head = tail = null;
-            size = 0;
-            return val;
-        }
-        // prev : i = size-2
-        Node prev = head;
-        for(int i=0; i<size-2; i++) {
-            prev = prev.next;
-        }
-        int val = prev.next.data;
-        prev.next = null;
-        tail = prev;
-        size--;
-        return val;
-    }
+    // public int removeLast() {
+    //     if(size == 0) {
+    //         System.out.println("LL is empty");
+    //         return Integer.MIN_VALUE;
+    //     } else if(size == 1) {
+    //         int val = head.data;
+    //         head = tail = null;
+    //         size = 0;
+    //         return val;
+    //     }
+    //     // prev : i = size-2
+    //     Node prev = head;
+    //     for(int i=0; i<size-2; i++) {
+    //         prev = prev.next;
+    //     }
+    //     int val = prev.next.data;
+    //     prev.next = null;
+    //     tail = prev;
+    //     size--;
+    //     return val;
+    // }
 
 
     // search
-    public int itrSearch(int key) { //0(n)
-        Node temp = head;
-        int i = 0;
+    // public int itrSearch(int key) { //0(n)
+    //     Node temp = head;
+    //     int i = 0;
 
-        while(temp != null) {
-            if(temp.data == key) { //key found
-                return i;
-            }
-            temp = temp.next;
-            i++;
+    //     while(temp != null) {
+    //         if(temp.data == key) { //key found
+    //             return i;
+    //         }
+    //         temp = temp.next;
+    //         i++;
+    //     }
+
+    //     // key not found
+    //     return -1;
+    // }
+
+
+    // recursive search
+    public int helper(Node head, int key) { //0(n)
+        if(head == null) {
+            return -1;
         }
 
-        // key not found
-        return -1;
+        if(head.data == key) {
+            return 0;
+        }
+        int idx = helper(head.next, key);
+        if(idx == -1) {
+            return -1;
+        }
+
+        return idx+1;
+    }
+    public int recSearch(int key) {
+        return helper(head, key);
     }
     public static void main(String args[]) {
         LinkedList ll = new LinkedList();
@@ -144,15 +165,30 @@ public class LinkedList {
         ll.add(2, 3);
 
         ll.print(); //1->2->3->4->5->
+
+
+        // size
         // System.out.println(ll.size);
-        ll.removeFirst();
-        ll.print();
 
-        ll.removeLast();
-        ll.print();
-        System.out.println(ll.size);
 
-        System.out.println(ll.itrSearch(3));
-        System.out.println(ll.itrSearch(10));
+        // Remove first
+        // ll.removeFirst();
+        // ll.print();
+
+
+        // Remove last
+        // ll.removeLast();
+        // ll.print();
+        // System.out.println(ll.size);
+
+
+        // iterative search
+        // System.out.println(ll.itrSearch(3));
+        // System.out.println(ll.itrSearch(10));
+
+
+        // recursive search
+        System.out.println(ll.recSearch(3));
+        System.out.println(ll.recSearch(10));
     }
 }
