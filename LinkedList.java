@@ -138,39 +138,68 @@ public class LinkedList {
 
 
     // recursive search
-    public int helper(Node head, int key) { //0(n)
-        if(head == null) {
-            return -1;
-        }
+    // public int helper(Node head, int key) { //0(n)
+    //     if(head == null) {
+    //         return -1;
+    //     }
 
-        if(head.data == key) {
-            return 0;
-        }
-        int idx = helper(head.next, key);
-        if(idx == -1) {
-            return -1;
-        }
+    //     if(head.data == key) {
+    //         return 0;
+    //     }
+    //     int idx = helper(head.next, key);
+    //     if(idx == -1) {
+    //         return -1;
+    //     }
 
-        return idx+1;
-    }
-    public int recSearch(int key) {
-        return helper(head, key);
-    }
+    //     return idx+1;
+    // }
+    // public int recSearch(int key) {
+    //     return helper(head, key);
+    // }
 
 
     // reverse
-    public void reverse() {
-        Node prev = null;
-        Node curr = tail = head;
-        Node next;
+    // public void reverse() {
+    //     Node prev = null;
+    //     Node curr = tail = head;
+    //     Node next;
 
-        while(curr != null) {
-            next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
+    //     while(curr != null) {
+    //         next = curr.next;
+    //         curr.next = prev;
+    //         prev = curr;
+    //         curr = next;
+    //     }
+    //     head = prev;
+    // }
+
+
+    // delete nth node from end
+    public void deleteNthfromEnd(int n) {
+        // calculate size
+        int sz = 0;
+        Node temp = head;
+        while(temp != null) {
+            temp = temp.next;
+            sz++;
         }
-        head = prev;
+
+        if(n == sz) {
+            head = head.next; //removefirst
+            return;
+        }
+
+        // sz-n
+        int i = 1;
+        int iToFind = sz-n;
+        Node prev = head;
+        while(i < iToFind) {
+            prev = prev.next;
+            i++;
+        }
+
+        prev.next = prev.next.next;
+        return;
     }
     public static void main(String args[]) {
         LinkedList ll = new LinkedList();
@@ -209,7 +238,12 @@ public class LinkedList {
 
 
         // reverse
-        ll.reverse();
+        // ll.reverse();
+        // ll.print();
+
+
+        // delete nth node from end
+        ll.deleteNthfromEnd(3);
         ll.print();
     }
 }
