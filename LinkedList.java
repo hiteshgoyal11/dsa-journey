@@ -204,48 +204,65 @@ public class LinkedList {
 
 
     // slow-fast approach
-    public Node findMid(Node head) {
+    // public Node findMid(Node head) {
+    //     Node slow = head;
+    //     Node fast = head;
+
+    //     while(fast != null && fast.next != null) {
+    //         slow = slow.next; //+1
+    //         fast = fast.next.next; //+2
+    //     }
+    //     return slow; //slow is my middle
+    // }
+
+
+    // public boolean checkPalindrome() {
+    //     if(head == null || head.next == null) {
+    //         return true;
+    //     }
+    //     // step1 - find mid
+    //     Node midNode = findMid(head);
+
+    //     // step2 - reverse 2nd half
+    //     Node prev = null;
+    //     Node curr = midNode;
+    //     Node next;
+    //     while(curr != null) {
+    //         next = curr.next;
+    //         curr.next = prev;
+    //         prev = curr;
+    //         curr = next;
+    //     }
+
+    //     Node right = prev;//right half head
+    //     Node left = head;
+    //     // step3 - check left half & right half
+    //     while(right != null) {
+    //         if(left.data != right.data) {
+    //             return false;
+    //         }
+    //         left = left.next;
+    //         right = right.next;
+    //     }
+    //     return true;
+    // }
+
+
+    // Detect a loop/cycle in a LL
+    public static boolean isCycle() { //floyd's Cycle finding algorithm
         Node slow = head;
         Node fast = head;
-
+        
         while(fast != null && fast.next != null) {
             slow = slow.next; //+1
             fast = fast.next.next; //+2
-        }
-        return slow; //slow is my middle
-    }
-
-
-    public boolean checkPalindrome() {
-        if(head == null || head.next == null) {
-            return true;
-        }
-        // step1 - find mid
-        Node midNode = findMid(head);
-
-        // step2 - reverse 2nd half
-        Node prev = null;
-        Node curr = midNode;
-        Node next;
-        while(curr != null) {
-            next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
-        }
-
-        Node right = prev;//right half head
-        Node left = head;
-        // step3 - check left half & right half
-        while(right != null) {
-            if(left.data != right.data) {
-                return false;
+            if(slow == fast) {
+                return true; //cycle exists
             }
-            left = left.next;
-            right = right.next;
         }
-        return true;
+        return false;
     }
+
     public static void main(String args[]) {
         LinkedList ll = new LinkedList();
         // ll.addFirst(2);
@@ -293,9 +310,18 @@ public class LinkedList {
 
 
         // check palindrome
-        ll.addFirst(1);
-        ll.addFirst(2);
-        ll.addLast(1);
-        System.out.println(ll.checkPalindrome());
+        // ll.addFirst(1);
+        // ll.addFirst(2);
+        // ll.addLast(1);
+        // System.out.println(ll.checkPalindrome());
+
+
+        // 
+        head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = head;
+        // 1->2->3->1
+        System.out.println(isCycle());
     }
 }
