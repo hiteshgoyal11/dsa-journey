@@ -1,4 +1,5 @@
-public class LinkedList {
+import java.util.LinkedList;
+public class ll {
 
     public static class Node {
         int data;
@@ -360,5 +361,22 @@ public class LinkedList {
         // remove a loop/cycle in a LL
         // removeCycle();
         // System.out.println(isCycle());
+
+
+
+        // LL in java collections framework
+        // create -
+        LinkedList<Integer> ll = new LinkedList<>();
+
+        // add
+        ll.addLast(1);
+        ll.addLast(2);
+        ll.addFirst(0);
+        // 0->1->2
+        System.out.println(ll);
+        // remove
+        ll.removeLast();
+        ll.removeFirst();
+        System.out.println(ll);
     }
 }
