@@ -167,6 +167,36 @@ public class StackB {
     //     }
     // }
 
+
+
+    // Valid parentheses
+    public static boolean isValid(String str) {
+        Stack<Character> s = new Stack<>();
+
+        for(int i=0; i<str.length(); i++) {
+            char ch = str.charAt(i);
+
+            // opening
+            if(ch == '(' || ch == '{' || ch == '[') {
+                s.push(ch);
+            } else { //closing
+                if(s.isEmpty()) {
+                    return false;
+                }
+                if((s.peek() == '(' && ch == ')') || (s.peek() == '{' && ch == '}') || (s.peek() == '[' && ch == ']')) {
+                    s.pop();
+                } else {
+                    return false;
+                }
+            }
+        }
+        if(s.isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static void main(String args[]) {
         // Stack using arraylist
         // StackB s = new StackB();
@@ -249,30 +279,36 @@ public class StackB {
 
 
         // Next Greater Element
-        int arr[] = {9, 7, 4, 5, 3, 2};
-        Stack<Integer> s = new Stack<>();
-        int nxtGreater[] = new int[arr.length];
+        // int arr[] = {9, 7, 4, 5, 3, 2};
+        // Stack<Integer> s = new Stack<>();
+        // int nxtGreater[] = new int[arr.length];
 
-        for(int i=arr.length-1; i>= 0; i--) {
-            // 1. while
-            while(!s.isEmpty() && arr[s.peek()] <= arr[i]) {
-                s.pop();
-            }
+        // for(int i=arr.length-1; i>= 0; i--) {
+        //     // 1. while
+        //     while(!s.isEmpty() && arr[s.peek()] <= arr[i]) {
+        //         s.pop();
+        //     }
 
-            // 2. if-else
-            if(s.isEmpty()) {
-                nxtGreater[i] = -1;
-            } else {
-                nxtGreater[i] = arr[s.peek()];
-            }
+        //     // 2. if-else
+        //     if(s.isEmpty()) {
+        //         nxtGreater[i] = -1;
+        //     } else {
+        //         nxtGreater[i] = arr[s.peek()];
+        //     }
 
-            // 3. push element
-            s.push(i);
-        }
+        //     // 3. push element
+        //     s.push(i);
+        // }
 
-        for(int i=0; i<nxtGreater.length; i++) {
-            System.out.print(nxtGreater[i]+ " ");
-        }
-        System.out.println();
+        // for(int i=0; i<nxtGreater.length; i++) {
+        //     System.out.print(nxtGreater[i]+ " ");
+        // }
+        // System.out.println();
+
+
+
+        // Valid parentheses
+        String str = "(()[]{})";
+        System.out.println(isValid(str));
     }
 }
