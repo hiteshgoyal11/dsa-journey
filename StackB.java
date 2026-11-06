@@ -200,31 +200,91 @@ public class StackB {
 
 
     // Duplicate parentheses
-    public static boolean isDuplicate(String str) {
-        Stack<Character> s = new Stack<>();
+    // public static boolean isDuplicate(String str) {
+    //     Stack<Character> s = new Stack<>();
 
-        for(int i=0; i<str.length(); i++) {
-            char ch = str.charAt(i);
+    //     for(int i=0; i<str.length(); i++) {
+    //         char ch = str.charAt(i);
 
-            // closing
-            if(ch == ')') {
-                int count = 0;
-                while(s.peek() != '(') {
-                    s.pop();
-                    count++;
-                }
+    //         // closing
+    //         if(ch == ')') {
+    //             int count = 0;
+    //             while(s.peek() != '(') {
+    //                 s.pop();
+    //                 count++;
+    //             }
 
-                if(count < 1) { //duplicate
-                    return true;
-                } else { // '('
-                    s.pop();
-                }
-            } else { //opening
-                s.push(ch);
+    //             if(count < 1) { //duplicate
+    //                 return true;
+    //             } else { // '('
+    //                 s.pop();
+    //             }
+    //         } else { //opening
+    //             s.push(ch);
+    //         }
+    //     }
+
+    //     return false;
+    // }
+
+
+
+    // Max area in histogram
+    public static void maxAreaHistogram(int arr[]) {
+        int maxArea = 0;
+        int nsr[] = new int[arr.length];
+        int nsl[] = new int[arr.length];
+        // Next smaller right
+        Stack<Integer> s = new Stack<>();
+
+        for(int i=arr.length-1; i>=0; i--) {
+            // while
+            while(!s.isEmpty() && arr[s.peek()] >= arr[i]) {
+                s.pop();
             }
+
+            // if-else
+            if(s.isEmpty()) {
+                nsr[i] = arr.length;
+            } else {
+                nsr[i] = s.peek();
+            }
+
+            // push element
+            s.push(i);
         }
 
-        return false;
+        // Next smaller left
+        s = new Stack<>();
+
+        for(int i=0; i<arr.length; i++) {
+            // while
+            while(!s.isEmpty() && arr[s.peek()] >= arr[i]) {
+                s.pop();
+            }
+
+            // if-else
+            if(s.isEmpty()) {
+                nsl[i] = -1;
+            } else {
+                nsl[i] = s.peek();
+            }
+
+            // push element
+            s.push(i);
+
+        }
+
+        // current area
+        for(int i=0; i<arr.length; i++) {
+            int height = arr[i];
+            int width = nsr[i] - nsl[i] -1;
+            int currArea = width * height;
+            maxArea = Math.max(currArea, maxArea);
+
+        }
+
+        System.out.println("max area in histogram = " + maxArea);
     }
 
     public static void main(String args[]) {
@@ -344,9 +404,15 @@ public class StackB {
 
 
         // Duplicate parentheses
-        String str = "((a+b))";
-        String str2 = "(a-c)";
-        System.out.println(isDuplicate(str));
+        // String str = "((a+b))";
+        // String str2 = "(a-c)";
+        // System.out.println(isDuplicate(str));
+
+
+
+        // Max area in histogram
+        int heights[] = {2, 4};
+        maxAreaHistogram(heights);
 
     }
 }
