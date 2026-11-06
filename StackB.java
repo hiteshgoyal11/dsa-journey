@@ -170,31 +170,61 @@ public class StackB {
 
 
     // Valid parentheses
-    public static boolean isValid(String str) {
+    // public static boolean isValid(String str) {
+    //     Stack<Character> s = new Stack<>();
+
+    //     for(int i=0; i<str.length(); i++) {
+    //         char ch = str.charAt(i);
+
+    //         // opening
+    //         if(ch == '(' || ch == '{' || ch == '[') {
+    //             s.push(ch);
+    //         } else { //closing
+    //             if(s.isEmpty()) {
+    //                 return false;
+    //             }
+    //             if((s.peek() == '(' && ch == ')') || (s.peek() == '{' && ch == '}') || (s.peek() == '[' && ch == ']')) {
+    //                 s.pop();
+    //             } else {
+    //                 return false;
+    //             }
+    //         }
+    //     }
+    //     if(s.isEmpty()) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+
+
+
+    // Duplicate parentheses
+    public static boolean isDuplicate(String str) {
         Stack<Character> s = new Stack<>();
 
         for(int i=0; i<str.length(); i++) {
             char ch = str.charAt(i);
 
-            // opening
-            if(ch == '(' || ch == '{' || ch == '[') {
-                s.push(ch);
-            } else { //closing
-                if(s.isEmpty()) {
-                    return false;
-                }
-                if((s.peek() == '(' && ch == ')') || (s.peek() == '{' && ch == '}') || (s.peek() == '[' && ch == ']')) {
+            // closing
+            if(ch == ')') {
+                int count = 0;
+                while(s.peek() != '(') {
                     s.pop();
-                } else {
-                    return false;
+                    count++;
                 }
+
+                if(count < 1) { //duplicate
+                    return true;
+                } else { // '('
+                    s.pop();
+                }
+            } else { //opening
+                s.push(ch);
             }
         }
-        if(s.isEmpty()) {
-            return true;
-        } else {
-            return false;
-        }
+
+        return false;
     }
 
     public static void main(String args[]) {
@@ -308,7 +338,15 @@ public class StackB {
 
 
         // Valid parentheses
-        String str = "(()[]{})";
-        System.out.println(isValid(str));
+        // String str = "(()[]{})";
+        // System.out.println(isValid(str));
+
+
+
+        // Duplicate parentheses
+        String str = "((a+b))";
+        String str2 = "(a-c)";
+        System.out.println(isDuplicate(str));
+
     }
 }
