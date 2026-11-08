@@ -1,5 +1,5 @@
 // import java.util.LinkedList;
-public class LinkedList {
+public class LinkedList<E> extends java.util.LinkedList<E> {
 
     public static class Node {
         int data;
@@ -10,6 +10,7 @@ public class LinkedList {
             this.next = null;
         }
     }
+
     public static Node head;
     public static Node tail;
     public static int size;
