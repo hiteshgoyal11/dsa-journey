@@ -396,7 +396,7 @@ public class QueueB {
 
 
         //Q4 first non repeating leeter in a stream of characters
-        String str = "rsnnro";
+        String str = "aabccxb";
         printNonRepeating(str);
     }
 }
