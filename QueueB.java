@@ -341,7 +341,24 @@ public class QueueB {
     //         q.add(s.pop());
     //     }
     // }
-    
+
+
+    // Stack using deque
+    static class Stack {
+        Deque<Integer> deque = new LinkedList<>();
+
+        public void push(int data) {
+            deque.addLast(data);
+        }
+
+        public int pop() {
+            return deque.removeLast();
+        }
+
+        public int peek() {
+            return deque.getLast();
+        }
+    }
 
     public static void main(String args[]) {
         // Queue q = new Queue(5);
@@ -469,13 +486,25 @@ public class QueueB {
 
 
         // Deque
-        Deque<Integer> deque = new LinkedList<>();
-        deque.addFirst(1); // 1
-        deque.addFirst(2); // 2 1
-        deque.addLast(3); // 2 1 3
-        deque.addLast(4); // 2 1 3 4
-        System.out.println(deque);
-        deque.removeLast();
-        System.out.println(deque.getFirst());
+        // Deque<Integer> deque = new LinkedList<>();
+        // deque.addFirst(1); // 1
+        // deque.addFirst(2); // 2 1
+        // deque.addLast(3); // 2 1 3
+        // deque.addLast(4); // 2 1 3 4
+        // System.out.println(deque);
+        // deque.removeLast();
+        // System.out.println(deque.getFirst());
+
+
+
+        // Stack using deque
+        Stack s = new Stack();
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        System.out.println("peek = " +s.peek());
+        System.out.println(s.pop());
+        System.out.println(s.pop());
+        System.out.println(s.pop());
     }
 }
