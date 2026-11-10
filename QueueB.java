@@ -330,17 +330,17 @@ public class QueueB {
 
 
     // Q6 Queue reversal
-    public static void reverse(Queue<Integer> q) {
-        Stack<Integer> s = new Stack<>();
+    // public static void reverse(Queue<Integer> q) {
+    //     Stack<Integer> s = new Stack<>();
 
-        while(!q.isEmpty()) {
-            s.push(q.remove());
-        }
+    //     while(!q.isEmpty()) {
+    //         s.push(q.remove());
+    //     }
 
-        while(!s.isEmpty()) {
-            q.add(s.pop());
-        }
-    }
+    //     while(!s.isEmpty()) {
+    //         q.add(s.pop());
+    //     }
+    // }
     
 
     public static void main(String args[]) {
@@ -454,16 +454,28 @@ public class QueueB {
 
 
         // Q6 Queue reversal
-        Queue<Integer> q = new LinkedList<>();
-        q.add(1);
-        q.add(2);
-        q.add(3);
-        q.add(4);
-        q.add(5);
+        // Queue<Integer> q = new LinkedList<>();
+        // q.add(1);
+        // q.add(2);
+        // q.add(3);
+        // q.add(4);
+        // q.add(5);
 
-        reverse(q);
-        while(!q.isEmpty()) {
-            System.out.print(q.remove()+ " ");
-        }
+        // reverse(q);
+        // while(!q.isEmpty()) {
+        //     System.out.print(q.remove()+ " ");
+        // }
+
+
+
+        // Deque
+        Deque<Integer> deque = new LinkedList<>();
+        deque.addFirst(1); // 1
+        deque.addFirst(2); // 2 1
+        deque.addLast(3); // 2 1 3
+        deque.addLast(4); // 2 1 3 4
+        System.out.println(deque);
+        deque.removeLast();
+        System.out.println(deque.getFirst());
     }
 }
