@@ -11,22 +11,22 @@ public class Greedy {
         ArrayList<Integer> ans = new ArrayList<>();
 
         // 1st activity
-        maxAct = 1;
-        ans.add(0);
+        // maxAct = 1;
+        // ans.add(0);
 
-        int lastEnd = end[0];
-        for(int i=0; i<end.length; i++) {
-            if(start[i] >= lastEnd) {
-                maxAct++;
-                lastEnd = end[i];
-                ans.add(i);
-            }
-        }
+        // int lastEnd = end[0];
+        // for(int i=0; i<end.length; i++) {
+        //     if(start[i] >= lastEnd) {
+        //         maxAct++;
+        //         lastEnd = end[i];
+        //         ans.add(i);
+        //     }
+        // }
 
-        System.out.println("max activity = " +maxAct);
+        // System.out.println("max activity = " +maxAct);
         
-        for(int i=0; i<ans.size(); i++) {
-            System.out.print("A" +ans.get(i)+ " ");
-        }
+        // for(int i=0; i<ans.size(); i++) {
+        //     System.out.print("A" +ans.get(i)+ " ");
+        // }
     }
 }
