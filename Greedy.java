@@ -7,8 +7,8 @@ public class Greedy {
         int end[] = {2, 4, 6, 7, 9, 9};
 
         // endtime basis sort
-        int maxAct = 0;
-        ArrayList<Integer> ans = new ArrayList<>();
+        // int maxAct = 0;
+        // ArrayList<Integer> ans = new ArrayList<>();
 
         // 1st activity
         // maxAct = 1;
