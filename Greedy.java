@@ -23,7 +23,7 @@ public class Greedy {
             }
         }
 
-        // System.out.println("max activity = " +maxAct);
+        System.out.println("max activity = " +maxAct);
         
         // for(int i=0; i<ans.size(); i++) {
         //     System.out.print("A" +ans.get(i)+ " ");
