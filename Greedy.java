@@ -14,7 +14,7 @@ public class Greedy {
         maxAct = 1;
         ans.add(0);
 
-        int lastEnd = end[0];
+        // int lastEnd = end[0];
         // for(int i=0; i<end.length; i++) {
         //     if(start[i] >= lastEnd) {
         //         maxAct++;
